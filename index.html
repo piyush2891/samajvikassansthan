@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samaj Vikas Sansthan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #2c7a7b;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #225e5f;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+    }
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 5px 10px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background: #2c7a7b;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 id="title">Samaj Vikas Sansthan</h1>
+  <p id="tagline">Working for Social Development</p>
+</header>
+
+<nav>
+  <a href="#about" id="navAbout">About Us</a>
+  <a href="#work" id="navWork">Our Work</a>
+  <a href="#updates" id="navUpdates">Updates</a>
+  <a href="#contact" id="navContact">Contact</a>
+</nav>
+
+<div class="container">
+  <div class="lang-switch">
+    <strong>Language:</strong>
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('hi')">हिंदी</button>
+  </div>
+
+  <section id="about">
+    <h2 id="aboutTitle">About Us</h2>
+    <p id="aboutText">
+      Samaj Vikas Sansthan is a non-governmental organization dedicated to the
+      development of society through education, health, awareness, and social
+      welfare activities.
+    </p>
+  </section>
+
+  <section id="work">
+    <h2 id="workTitle">Our Work</h2>
+    <p id="workText">
+      We work in areas such as education for underprivileged children, health
+      camps, women empowerment, environmental awareness, and community
+      development programs.
+    </p>
+  </section>
+
+  <section id="updates">
+    <h2 id="updatesTitle">Latest Updates</h2>
+    <p id="updatesText">
+      Here you can regularly update information about recent activities,
+      events, and projects carried out by Samaj Vikas Sansthan.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2 id="contactTitle">Contact Us</h2>
+    <p id="contactText">
+      Email: info@samajvikassansthan.org<br />
+      Phone: +91-XXXXXXXXXX<br />
+      Address: Your Office Address Here
+    </p>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2026 Samaj Vikas Sansthan. All rights reserved.</p>
+</footer>
+
+<script>
+  const content = {
+    en: {
+      title: "Samaj Vikas Sansthan",
+      tagline: "Working for Social Development",
+      navAbout: "About Us",
+      navWork: "Our Work",
+      navUpdates: "Updates",
+      navContact: "Contact",
+      aboutTitle: "About Us",
+      aboutText:
+        "Samaj Vikas Sansthan is a non-governmental organization dedicated to the development of society through education, health, awareness, and social welfare activities.",
+      workTitle: "Our Work",
+      workText:
+        "We work in areas such as education for underprivileged children, health camps, women empowerment, environmental awareness, and community development programs.",
+      updatesTitle: "Latest Updates",
+      updatesText:
+        "Here you can regularly update information about recent activities, events, and projects carried out by Samaj Vikas Sansthan.",
+      contactTitle: "Contact Us",
+      contactText:
+        "Email: info@samajvikassansthan.org<br />Phone: +91-XXXXXXXXXX<br />Address: Your Office Address Here"
+    },
+    hi: {
+      title: "समाज विकास संस्थान",
+      tagline: "सामाजिक विकास के लिए कार्यरत",
+      navAbout: "हमारे बारे में",
+      navWork: "हमारा कार्य",
+      navUpdates: "अपडेट्स",
+      navContact: "संपर्क करें",
+      aboutTitle: "हमारे बारे में",
+      aboutText:
+        "समाज विकास संस्थान एक गैर-सरकारी संगठन है जो शिक्षा, स्वास्थ्य, जागरूकता और सामाजिक कल्याण गतिविधियों के माध्यम से समाज के विकास के लिए कार्य करता है।",
+      workTitle: "हमारा कार्य",
+      workText:
+        "हम वंचित बच्चों की शिक्षा, स्वास्थ्य शिविर, महिला सशक्तिकरण, पर्यावरण जागरूकता और सामुदायिक विकास कार्यक्रमों में कार्य करते हैं।",
+      updatesTitle: "नवीनतम अपडेट",
+      updatesText:
+        "यहाँ आप समाज विकास संस्थान द्वारा की गई हालिया गतिविधियों, कार्यक्रमों और परियोजनाओं की जानकारी नियमित रूप से अपडेट कर सकते हैं।",
+      contactTitle: "संपर्क करें",
+      contactText:
+        "ईमेल: info@samajvikassansthan.org<br />फोन: +91-XXXXXXXXXX<br />पता: यहाँ अपना कार्यालय पता लिखें"
+    }
+  };
+
+  function setLanguage(lang) {
+    document.getElementById("title").innerHTML = content[lang].title;
+    document.getElementById("tagline").innerHTML = content[lang].tagline;
+    document.getElementById("navAbout").innerHTML = content[lang].navAbout;
+    document.getElementById("navWork").innerHTML = content[lang].navWork;
+    document.getElementById("navUpdates").innerHTML = content[lang].navUpdates;
+    document.getElementById("navContact").innerHTML = content[lang].navContact;
+    document.getElementById("aboutTitle").innerHTML = content[lang].aboutTitle;
+    document.getElementById("aboutText").innerHTML = content[lang].aboutText;
+    document.getElementById("workTitle").innerHTML = content[lang].workTitle;
+    document.getElementById("workText").innerHTML = content[lang].workText;
+    document.getElementById("updatesTitle").innerHTML = content[lang].updatesTitle;
+    document.getElementById("updatesText").innerHTML = content[lang].updatesText;
+    document.getElementById("contactTitle").innerHTML = content[lang].contactTitle;
+    document.getElementById("contactText").innerHTML = content[lang].contactText;
+  }
+</script>
+
+</body>
+</html>
